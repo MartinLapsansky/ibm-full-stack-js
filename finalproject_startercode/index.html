@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <title>Martin Lapsansky - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          <p class="name">Martin Lapsansky</p>
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+            career.lapsansky@gmail.com
+          </div>
+          <div style="clear:both;"></div>
+          <div class="contact_info">
+            <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+            +13456764598
+          </div>
+        </div>
+        <div class="topdiv">
+          <button class="topmenu" onclick="smoothScrollToSections('about')">About Me</button>
+          <!-- Add the links for Skills, Projects and Recommendation here -->
+          <button class="topmenu" onclick="smoothScrollToSections('skills')">Skills</button>
+          <button class="topmenu" onclick="smoothScrollToSections('projects')">Projects</button>
+          <button class="topmenu"  onclick="smoothScrollToSections('recommendations')">Recommendations</button>
+        </div>
+        <div class="resume">
+          <button class="resume" onclick="openPdfFile()">Resume</button>
+        </div>
+        <!-- hamburger menu implementation -->
+        <div class="hamburger-menu">
+          <button id="hamburgerBtn" class="hamburger-btn" aria-expanded="false" aria-controls="navMenu" title="Toggle menu">
+            <!-- SVG hamburger: three centered rects -->
+            <svg class="hamburger-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <!-- Using rects so transforms are straightforward -->
+              <rect class="bar top" x="3" y="6" width="40" height="3" rx="3"  ></rect>
+              <rect class="bar middle" x="3" y="13" width="40" height="3" rx="3" ></rect>
+              <rect class="bar bottom" x="3" y="20" width="40" height="3" rx="3" ></rect>
+            </svg>
+          </button>
+        </div>
+        <!-- create hamburger menu when size is less than 768 -->
+      </div>
+    </nav>
+
+    <nav id="navMenu" class="menu" aria-hidden="true">
+        <button class="hamburger-item" onclick="smoothScrollToSections('about')">about me</button>
+        <!-- Add the links for Skills, Projects and Recommendation here -->
+        <button class="hamburger-item" onclick="smoothScrollToSections('skills')">skills</button>
+        <button class="hamburger-item" onclick="smoothScrollToSections('projects')">projects</button>
+        <button class="hamburger-item"  onclick="smoothScrollToSections('recommendations')">recommendations</button>
+
+    </nav>
+
+    <div class="wrapper">
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div class="about-text">
+        <h1>
+          Hi, I'm Martin Lapsansky! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
+        </h1>
+        <p class="about-description">
+          Hi, I am a computer science graduate from the Technical University
+          of Kosice with a strong interest in web application development,
+          which i got through various academic courses and hands-on projects.
+          While my primary focus has been on frontend (React.js) and backend
+          (Node.js) development, I remain open to exploring other areas
+          within the IT field.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="./html_finalprojimages/coding.gif" class="profile_image"/>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h6>HTML</h6>
+          <p>3 years experience</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/CSS3.png"/>
+          <h6>CSS</h6>
+          <p>3 years experience</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/java.png" style="width: 60px;"/>
+          <h6>Java</h6>
+          <p>3 years experience</p>
+        </div>
+        <div class="skill">
+          <div class="node-js-heigth">
+            <img src="html_finalprojimages/node.png" style="height: 60px;"/>
+          </div>
+          <h6>Node.js</h6>
+          <p>2 years experience</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/postgresql.png" style="width: 140px;"/>
+          <h6>PostgreSQL</h6>
+          <p>2 years experience</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/mongodb.png" style="background-color: white;"/>
+          <h6>MongoDB</h6>
+          <p>2 years experience</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/react.png" style="width: 120px;"/>
+          <h6>React</h6>
+          <p>2 years experience</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/nextjs.png"/>
+          <h6>Next.js</h6>
+          <p>2 years experience</p>
+        </div>
+
+
+        <!-- Add more skills here -->
+
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div id="projects-container" class="projects-container">
+        <div class="project-card">
+          <h3>AI Support System for Call Operator</h3>
+          <ul>
+            <li>Full-stack web application with real-time speech processing (websocket) and LLMs for automatic transcription, content analysis, and key information extraction during emergency calls.</li>
+          </ul>
+        </div>
+        <hr>
+        <div class="project-card">
+          <h3>Artificial Intelligence in the Routing Process in MANET Networks</h3>
+          <ul>
+            <li>Integration of the PSO (Particle Swarm Optimization) algorithm with a network routing protocol to enhance routing metric values, crucial for efficient packet delivery. Evaluated using sequential simulations in the NS3 simulator.</li>
+          </ul>
+        </div>
+        <hr>
+        <div class="project-card">
+          <h3>Web application for shelters</h3>
+          <ul>
+            <li>Developed the mobile and web application as part of the Live IT projects in collaboration with company Accenture and our university.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Martin quickly picks up new web development skills and applies them with precision. He brings a positive, can-do attitude to every project and works seamlessly with others. His natural curiosity leads him to explore innovative solutions and ask thoughtful, relevant questions.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Martin has an impressive ability to learn new web development concepts quickly and apply them effectively. He is dependable, collaborative, and brings valuable insights to discussions. His proactive nature and problem-solving skills make him a strong contributor and a promising future leader
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Martin is one of those rare developers who combines technical talent with a genuine passion for teamwork. He learns fast, asks the right questions, and brings fresh ideas to the table. He takes initiative, adapts quickly, and lifts the entire team with his energy. It is easy to imagine him leading projects in the near future, he has all the right qualities.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- Recommendation Form -->
+    <section id="contact">
+      <div id="contact-container">
+        <h3>Leave a recommendation</h3>
+        <form id="recommendation-form" onsubmit="showPopup(true); return false;">
+          <label for="name"></label><input placeholder="Name(optional)" type="text" id="name" name="name" required>
+
+          <label for="recommendation_form_input"></label><textarea placeholder="Message" id="recommendation_form_input" name="recommendation" rows="10" required></textarea>
+            <div id="error-message" class="error-message" style="display:none;"></div>
+        </form>
+        <button id="submit-button" onclick="addRecommendation()" type="submit">Submit</button>
+
+      </div>
+    </section>
+
+      <div class="icon-button" onclick="smoothScrollToSections('home')">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </div>
+
+    <div class="popup" id="popup">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h4>Thanks for leaving the recommendation!</h4>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+
+    </div>
+
+
+  </body>
+</html>

@@ -1,4 +1,3 @@
-
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('todoList');
@@ -17,8 +16,20 @@ function addTask() {
         taskList.removeChild(newTask);
     };
 
+    const editButton = document.createElement('button');
+    editButton.textContent = 'Edit';
+    editButton.onclick = function() {
+        const newTaskText = prompt('Edit your task:');
+        if (newTaskText !== null && newTaskText.trim() !== '') {
+            newTask.textContent = newTaskText;
+            newTask.appendChild(deleteButton);
+            newTask.appendChild(editButton);
+        }
+    };
+
     newTask.appendChild(deleteButton);
     taskList.appendChild(newTask);
+    newTask.appendChild(editButton);
 
     taskInput.value = '';
 }
